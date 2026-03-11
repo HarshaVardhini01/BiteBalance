@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BiteBalance - Nutrition Diet Assistant</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; background: #f9fafb; color: #333; }
+
+    /* Navbar */
+    nav {
+      background: #2c3e50;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav h1 { font-size: 1.5rem; }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin-left: 20px; }
+    nav ul li a { color: #fff; text-decoration: none; transition: 0.3s; }
+    nav ul li a:hover { color: #eebd1c; }
+
+    /* Hero Section */
+    .hero {
+  height: 90vh;
+  background: url('images/background.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+/* Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* adjust darkness (0.3 = lighter, 0.7 = darker) */
+  z-index: 1;
+}
+
+/* Make sure hero text sits above overlay */
+.hero h2,
+.hero p,
+.hero .buttons {
+  position: relative;
+  z-index: 2;
+}
+
+    .hero h2 { font-size: 3rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 20px; }
+    .buttons { display: flex; gap: 15px; }
+    .hero button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  background: #808080;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+  box-shadow: 0 0 8px rgba(59, 62, 71, 0.4); /* subtle glow */
+}
+
+.hero button:hover {
+  background: #808080;
+  box-shadow: 0 0 20px rgba(71, 76, 83, 0.9); /* stronger glow on hover */
+  transform: scale(1.05); /* small zoom effect */
+}
+
+
+    /* Features Section */
+    .features {
+      padding: 60px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      text-align: center;
+    }
+    .feature {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .feature:hover { transform: translateY(-5px); }
+    .feature h3 { color: #808080; margin-bottom: 10px; }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>BiteBalance</h1>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Your Personalized Nutrition Companion</h2>
+    <p>Eat better, live better. Simplify healthy eating with BiteBalance.</p>
+    <div class="buttons">
+      <button onclick="scrollToFeatures()">Explore Features</button>
+      <button onclick="loginSignup()">Login / Signup</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="feature">
+      <h3>🍽 Personalized Diet Plans</h3>
+      <p>Customized meal plans based on your needs, preferences, and health goals.</p>
+    </div>
+    <div class="feature">
+      <h3>📊 Food Tracking</h3>
+      <p>Log your meals and track calories & macronutrients with ease.</p>
+    </div>
+    <div class="feature">
+      <h3>📈 Progress Monitoring</h3>
+      <p>Stay motivated with charts and graphs that show your progress.</p>
+    </div>
+    <div class="feature">
+      <h3>📚 Educational Resources</h3>
+      <p>Access tips, recipes, and articles to learn about healthy eating.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>© 2025 BiteBalance | Rajiv Gandhi University of Knowledge Technologies, Basar</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function scrollToFeatures() {
+      document.getElementById("features").scrollIntoView({ behavior: "smooth" });
+    }
+    function loginSignup() {
+     
+     window.location.href = "login.php";
+    }
+  </script>
+
+</body>
+</html>
